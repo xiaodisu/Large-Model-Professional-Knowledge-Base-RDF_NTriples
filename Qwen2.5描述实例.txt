@@ -1,0 +1,148 @@
+# --------------------------------
+# 实例数据示例
+# --------------------------------
+
+# 大模型实例：Qwen2.5
+<http://example.org/models/lm001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/large-model#LargeModel> .
+<http://example.org/models/lm001> <http://purl.org/dc/terms/identifier> "lm001" .
+<http://example.org/models/lm001> <http://purl.org/dc/terms/title> "通义千问大模型"@zh .
+<http://example.org/models/lm001> <http://purl.org/dc/terms/alternative> "Qwen2.5"@en .
+<http://example.org/models/lm001> <http://purl.org/dc/terms/issued> "2024-09-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/models/lm001> <https://schema.org/version> "Qwen2.5" .
+<http://example.org/models/lm001> <http://example.org/large-model#improvement> "能够生成超过8k tokens的内容，提升角色扮演和机器人的背景设定能力，支持29种语言的多模态处理。"@zh .
+<http://example.org/models/lm001> <http://example.org/large-model#parameterSize> "5/15/30/70/140/320/720亿"@zh .
+<http://example.org/models/lm001> <http://example.org/large-model#contextLength> "128k"@zh .
+<http://example.org/models/lm001> <http://example.org/large-model#numberOfLayers> "" .
+<http://example.org/models/lm001> <http://purl.org/dc/terms/language> "Qwen2.5支持29种以上语言，包括中文、英文、法文、西班牙文、葡萄牙文、德文、意大利文、俄文、日文、韩文、越南文、泰文、阿拉伯文等。"@zh .
+<http://example.org/models/lm001> <http://example.org/large-model#architecture> "基于Transformer的密集架构"@zh .
+<http://example.org/models/lm001> <http://purl.org/dc/terms/accessRights> "开源"@zh .
+
+# 论文实例：Qwen2.5 Technical Report
+<http://example.org/papers/paper1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/large-model#Paper> .
+<http://example.org/papers/paper1> <http://purl.org/dc/terms/identifier> "paper1" .
+<http://example.org/papers/paper1> <http://purl.org/dc/terms/title> "Qwen2.5 Technical Report"@en .
+<http://example.org/papers/paper1> <http://purl.org/dc/terms/abstract> "介绍了Qwen2.5的设计目标、技术细节、性能表现及应用场景，突出其在多模态处理、长文本生成等方面的优势，强调通过大规模数据预训练和先进微调技术实现的性能提升。"@zh .
+<http://example.org/papers/paper1> <http://purl.org/dc/terms/issued> "2024-09-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+# 数据集实例：QWEN2.5预训练数据集
+<http://example.org/datasets/data001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Dataset> .
+<http://example.org/datasets/data001> <http://purl.org/dc/terms/identifier> "data001" .
+<http://example.org/datasets/data001> <http://purl.org/dc/terms/title> "QWEN2.5预训练数据集"@zh .
+<http://example.org/datasets/data001> <http://purl.org/dc/terms/issued> "2024-09-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/datasets/data001> <http://example.org/large-model#datasetScale> "18万亿token"@zh .
+<http://example.org/datasets/data001> <http://www.w3.org/ns/dcat#keyword> "文本、代码、数学、多模态"@zh .
+<http://example.org/datasets/data001> <http://purl.org/dc/terms/description> "涵盖文本、代码、数学等领域知识，支持多模态输入，包括图像、音频和视频。"@zh .
+<http://example.org/datasets/data001> <http://example.org/large-model#dataSource> "网络文本语料，如维基百科、新闻文章、论坛帖子、小说书籍等各种网页内容，以及开源代码库和技术论坛中的代码数据等。"@zh .
+
+# 代理实例：通义千问
+<http://example.org/agents/agent001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/large-model#Agent> .
+<http://example.org/agents/agent001> <http://purl.org/dc/terms/identifier> "agent001" .
+<http://example.org/agents/agent001> <http://purl.org/dc/terms/title> "通义千问"@zh .
+<http://example.org/agents/agent001> <http://purl.org/dc/terms/type> "通用、金融、医疗、教育、科研"@zh .
+<http://example.org/agents/agent001> <https://schema.org/price> "Qwen-Plus为0.0008-0.002元，Qwen-Turbo为0.0003-0.0006元"@zh .
+
+# 发布者实例：阿里云
+<http://example.org/publishers/pub1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/large-model#Publisher> .
+<http://example.org/publishers/pub1> <http://xmlns.com/foaf/0.1/name> "阿里云"@zh .
+
+# 运行实例
+<http://example.org/runs/run001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/mls#Runs> .
+<http://example.org/runs/run001> <http://purl.org/dc/terms/identifier> "run001" .
+<http://example.org/runs/run001> <http://example.org/large-model#api> "" .
+
+# 任务实例
+<http://example.org/tasks/task1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/mls#Task> .
+<http://example.org/tasks/task1> <http://purl.org/dc/terms/type> "文本、多模态"@zh .
+
+# 超参数设置实例
+<http://example.org/hyperparams/hp1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/mls#HyperParameterSetting> .
+<http://example.org/hyperparams/hp1> <http://example.org/large-model#preTrainingToken> "18万亿"@zh .
+<http://example.org/hyperparams/hp1> <http://example.org/large-model#pretrainingMethod> "自回归预训练、自监督学习"@zh .
+<http://example.org/hyperparams/hp1> <http://example.org/large-model#learningRate> "2e-5" .
+<http://example.org/hyperparams/hp1> <http://example.org/large-model#optimizer> "paged_adamw_8bit"@en .
+<http://example.org/hyperparams/hp1> <http://example.org/large-model#decayMethod> "权重衰减"@zh .
+<http://example.org/hyperparams/hp1> <http://example.org/large-model#fineTuningMethod> "监督微调(SFT)、直接偏好优化(DPO)和在线强化学习(GRPO)"@zh .
+
+# 大模型评估实例
+<http://example.org/evaluations/eval1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/large-model#LargeModelEvaluation> .
+<http://example.org/evaluations/eval1> <http://www.w3.org/ns/mls#hasValue> "86.8" .
+
+# 评估度量实例
+<http://example.org/measures/measure1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/mls#EvaluationMeasure> .
+<http://example.org/measures/measure1> <http://example.org/large-model#valueBad> "<50"@zh .
+<http://example.org/measures/measure1> <http://example.org/large-model#valueGood> ">86"@zh .
+<http://example.org/measures/measure1> <http://purl.org/dc/terms/title> "MMLU-rudex"@en .
+<http://example.org/measures/measure1> <http://purl.org/dc/terms/description> "通过计算模型输出与正确答案的匹配程度来评估模型性能。"@zh .
+
+# 评估规范实例
+<http://example.org/specs/spec1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/mls#EvaluationSpecification> .
+<http://example.org/specs/spec1> <http://example.org/large-model#sample> "MMLU-rudex数据集"@zh .
+<http://example.org/specs/spec1> <http://example.org/large-model#sampleSize> "约3000个问题"@zh .
+<http://example.org/specs/spec1> <http://purl.org/dc/terms/description> "按照 MMLU-rudex 的标准流程进行数据准备、模型评估和结果计算，保证评估的公正性和一致性。"@zh .
+<http://example.org/specs/spec1> <http://purl.org/dc/terms/title> "准确率"@zh .
+
+# 评估程序实例
+<http://example.org/procedures/proc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/mls#EvaluationProcedure> .
+<http://example.org/procedures/proc1> <http://purl.org/dc/terms/title> "交叉验证/留一法"@zh .
+<http://example.org/procedures/proc1> <http://purl.org/dc/terms/description> "1.零样本和少样本测试；2.计算每个问题的准确率。"@zh .
+
+# 大模型实例：Qwen2.0
+<http://example.org/models/lm002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/large-model#LargeModel> .
+<http://example.org/models/lm002> <http://purl.org/dc/terms/identifier> "lm002" .
+<http://example.org/models/lm002> <http://purl.org/dc/terms/title> "通义千问大模型"@zh .
+<http://example.org/models/lm002> <http://purl.org/dc/terms/alternative> "Qwen2.0"@en .
+<http://example.org/models/lm002> <http://purl.org/dc/terms/issued> "2024-06-07"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/models/lm002> <https://schema.org/version> "Qwen2.0" .
+<http://example.org/models/lm002> <http://example.org/large-model#improvement> "使用了GQA(分组查询注意力)机制，具有更快的推理速度和更低的显存占用。"@zh .
+<http://example.org/models/lm002> <http://example.org/large-model#parameterSize> "5/15/70/570/720亿"@zh .
+<http://example.org/models/lm002> <http://example.org/large-model#contextLength> "128k"@zh .
+<http://example.org/models/lm002> <http://example.org/large-model#numberOfLayers> "" .
+<http://example.org/models/lm002> <http://purl.org/dc/terms/language> "Qwen2.0支持27种以上语言，包括德语、法语、西班牙语、葡萄牙语、意大利语、波兰语、阿拉伯语、日语、韩语、越南语、泰语、印尼语、菲律宾语等。"@zh .
+<http://example.org/models/lm002> <http://example.org/large-model#architecture> "Transformer密集架构和专家混合模型架构(MoE)"@zh .
+<http://example.org/models/lm002> <http://purl.org/dc/terms/accessRights> "开源"@zh .
+
+# 关系实例：微调自
+<http://example.org/models/lm001> <http://example.org/large-model#fineTunedFrom> <http://example.org/models/lm002> .
+
+# 关系实例：输入
+<http://example.org/runs/run001> <http://www.w3.org/ns/mls#hasInput> <http://example.org/datasets/data001> .
+<http://example.org/runs/run001> <http://www.w3.org/ns/mls#hasInput> <http://example.org/hyperparams/hp1> .
+
+# 关系实例：输出
+<http://example.org/runs/run001> <http://www.w3.org/ns/mls#hasOutput> <http://example.org/models/lm001> .
+<http://example.org/runs/run001> <http://www.w3.org/ns/mls#hasOutput> <http://example.org/evaluations/eval1> .
+
+# 关系实例：实现
+<http://example.org/runs/run001> <http://www.w3.org/ns/mls#achieves> <http://example.org/tasks/task1> .
+
+# 关系实例：服务的大模型
+<http://example.org/agents/agent001> <http://example.org/large-model#servesLargeModel> <http://example.org/models/lm001> .
+
+# 关系实例：大模型任务类型
+<http://example.org/agents/agent001> <http://example.org/large-model#hasModelType> <http://example.org/tasks/task1> .
+
+# 关系实例：基于…定义
+<http://example.org/tasks/task1> <http://www.w3.org/ns/mls#definedOn> <http://example.org/datasets/data001> .
+
+# 关系实例：介绍的大模型
+<http://example.org/papers/paper1> <http://example.org/large-model#hasLargeModel> <http://example.org/models/lm001> .
+
+# 关系实例：为…做出贡献
+<http://example.org/models/lm001> <http://example.org/large-model#wasAttributedTo> <http://example.org/publishers/pub1> .
+
+# 关系实例：创建者
+<http://example.org/papers/paper1> <http://purl.org/dc/terms/creator> <http://example.org/publishers/pub1> .
+<http://example.org/agents/agent001> <http://purl.org/dc/terms/creator> <http://example.org/publishers/pub1> .
+
+# 关系实例：上传者
+<http://example.org/runs/run001> <http://example.org/large-model#hasUploader> <http://example.org/publishers/pub1> .
+
+# 关系实例：定义
+<http://example.org/specs/spec1> <http://www.w3.org/ns/mls#defines> <http://example.org/tasks/task1> .
+
+# 关系实例：由…组成
+<http://example.org/specs/spec1> <http://www.w3.org/ns/mls#hasPart> <http://example.org/measures/measure1> .
+<http://example.org/specs/spec1> <http://www.w3.org/ns/mls#hasPart> <http://example.org/procedures/proc1> .
+
+# 关系实例：通过…评估
+<http://example.org/evaluations/eval1> <http://www.w3.org/ns/mls#specifiedBy> <http://example.org/measures/measure1> .

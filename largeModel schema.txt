@@ -1,0 +1,430 @@
+# --------------------------------
+# 命名空间定义（需在文件头部声明）
+# --------------------------------
+<http://purl.org/dc/terms/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://example.org/large-model#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3.org/ns/mls#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3.org/ns/dcat#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://xmlns.com/foaf/0.1/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://schema.org/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+
+# --------------------------------
+# 核心类定义
+# --------------------------------
+<http://example.org/large-model#LargeModel> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "大模型"@zh, "Large Model"@en .
+
+<http://example.org/large-model#Paper> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "论文资源"@zh, "Paper"@en .
+
+<http://www.w3.org/ns/dcat#Dataset> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "数据集"@zh, "Dataset"@en .
+
+<http://example.org/large-model#Agent> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "代理"@zh, "Agent"@en .
+
+<http://example.org/large-model#Publisher> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "发布者"@zh, "Publisher"@en .
+
+<http://www.w3.org/ns/mls#Runs> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "运行"@zh, "Runs"@en .
+
+<http://www.w3.org/ns/mls#Task> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "任务"@zh, "Task"@en .
+
+<http://example.org/large-model#LargeModelEvaluation> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "大模型评估"@zh, "LargeModelEvaluation"@en .
+
+<http://www.w3.org/ns/mls#HyperParameterSetting> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "超参数设置"@zh, "HyperParameterSetting"@en .
+
+<http://www.w3.org/ns/mls#EvaluationMeasure> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "评估度量"@zh, "EvaluationMeasure"@en .
+
+<http://www.w3.org/ns/mls#EvaluationSpecification> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "评估规范"@zh, "EvaluationSpecification"@en .
+
+<http://www.w3.org/ns/mls#EvaluationProcedure> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "评估程序"@zh, "EvaluationProcedure"@en .
+
+
+# --------------------------------
+# 关系属性定义
+# --------------------------------
+
+# 微调自
+<http://example.org/large-model#fineTunedFrom> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "微调自"@zh, "fineTunedFrom"@en ;
+    <http://purl.org/dc/terms/description> "大模型微调自前一版本大模型。"@zh .
+
+# 输入
+<http://www.w3.org/ns/mls#hasInput> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Runs> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Dataset>, <http://www.w3.org/ns/mls#HyperParameterSetting> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "输入"@zh, "hasInput"@en ;
+    <http://purl.org/dc/terms/description> "运行输入。"@zh .
+
+# 输出
+<http://www.w3.org/ns/mls#hasOutput> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Runs> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/large-model#LargeModel>, <http://example.org/large-model#LargeModelEvaluation> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "输出"@zh, "hasOutput"@en ;
+    <http://purl.org/dc/terms/description> "运行输出。"@zh .
+
+# 实现
+<http://www.w3.org/ns/mls#achieves> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Runs> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Task> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "实现"@zh, "achieves"@en ;
+    <http://purl.org/dc/terms/description> "任务被运行实现。"@zh .
+
+# 服务的大模型
+<http://example.org/large-model#servesLargeModel> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#Agent> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "服务的大模型"@zh, "servesLargeModel"@en ;
+    <http://purl.org/dc/terms/description> "代理服务于大模型。"@zh .
+
+# 大模型任务类型
+<http://example.org/large-model#hasModelType> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#Agent> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Task> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "大模型任务类型"@zh, "hasModelType"@en ;
+    <http://purl.org/dc/terms/description> "代理具有的任务类型。"@zh .
+
+# 基于…定义
+<http://www.w3.org/ns/mls#definedOn> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Task> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Dataset> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "基于…定义"@zh, "definedOn"@en ;
+    <http://purl.org/dc/terms/description> "任务基于数据集定义。"@zh .
+
+# 介绍的大模型
+<http://example.org/large-model#hasLargeModel> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#Paper> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "介绍的大模型"@zh, "hasLargeModel"@en ;
+    <http://purl.org/dc/terms/description> "论文资源介绍大模型。"@zh .
+
+# 为…做出贡献
+<http://example.org/large-model#wasAttributedTo> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel>, <http://www.w3.org/ns/dcat#Dataset> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/large-model#Publisher> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "为…做出贡献"@zh, "wasAttributedTo"@en ;
+    <http://purl.org/dc/terms/description> "发布者为资源做贡献。"@zh .
+
+# 创建者
+<http://purl.org/dc/terms/creator> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#Paper>, <http://example.org/large-model#Agent> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/large-model#Publisher> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "创建者"@zh, "creator"@en ;
+    <http://purl.org/dc/terms/description> "资源的创建者。"@zh .
+
+# 上传者
+<http://example.org/large-model#hasUploader> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Runs> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/large-model#Publisher> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "上传者"@zh, "hasUploader"@en ;
+    <http://purl.org/dc/terms/description> "资源的上传者。"@zh .
+
+# 定义
+<http://www.w3.org/ns/mls#defines> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#EvaluationSpecification> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#Task> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "定义"@zh, "defines"@en ;
+    <http://purl.org/dc/terms/description> "评估规范定义任务。"@zh .
+
+# 由…组成
+<http://www.w3.org/ns/mls#hasPart> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#EvaluationSpecification> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#EvaluationMeasure>, <http://www.w3.org/ns/mls#EvaluationProcedure> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "由…组成"@zh, "hasPart"@en ;
+    <http://purl.org/dc/terms/description> "评估规范由评估度量和评估程序组成。"@zh .
+
+# 通过…评估
+<http://www.w3.org/ns/mls#specifiedBy> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModelEvaluation> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/mls#EvaluationMeasure> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "通过…评估"@zh, "specifiedBy"@en ;
+    <http://purl.org/dc/terms/description> "大模型评估是通过评估度量进行评估。"@zh .
+
+
+# --------------------------------
+# 类属性定义
+# --------------------------------
+
+# 标识符
+<http://purl.org/dc/terms/identifier> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel>, <http://www.w3.org/ns/dcat#Dataset>, <http://example.org/large-model#Agent>, <http://www.w3.org/ns/mls#Runs> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "标识符"@zh, "identifier"@en ;
+    <http://purl.org/dc/terms/description> "资源的标识符。"@zh .
+
+# 名称
+<http://purl.org/dc/terms/title> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel>, <http://example.org/large-model#Agent> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "名称"@zh, "title"@en ;
+    <http://purl.org/dc/terms/description> "资源的名称。"@zh .
+
+<http://xmlns.com/foaf/0.1/name> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#Publisher> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "名称"@zh, "name"@en ;
+    <http://purl.org/dc/terms/description> "发布者名称。"@zh .
+
+# 发布日期
+<http://purl.org/dc/terms/issued> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel>, <http://www.w3.org/ns/dcat#Dataset>, <http://example.org/large-model#Paper> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "发布日期"@zh, "issued"@en ;
+    <http://purl.org/dc/terms/description> "资源的发布日期。"@zh .
+
+# 副名
+<http://purl.org/dc/terms/alternative> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "副名"@zh, "alternative"@en ;
+    <http://purl.org/dc/terms/description> "大模型的副名（英文名）。"@zh .
+
+# 版本
+<http://schema.org/version> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "版本"@zh, "version"@en ;
+    <http://purl.org/dc/terms/description> "大模型的当前版本。"@zh .
+
+# 改进点
+<http://example.org/large-model#improvement> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "改进点"@zh, "improvement"@en ;
+    <http://purl.org/dc/terms/description> "大模型相对于上一版本的改进点。"@zh .
+
+# 参数量
+<http://example.org/large-model#parameterSize> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "参数量"@zh, "parameterSize"@en ;
+    <http://purl.org/dc/terms/description> "大模型的参数量。"@zh .
+
+# 上下文长度
+<http://example.org/large-model#contextLength> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "上下文长度"@zh, "contextLength"@en ;
+    <http://purl.org/dc/terms/description> "大模型能处理的上下文长度。"@zh .
+
+# 层数
+<http://example.org/large-model#numberOfLayers> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "层数"@zh, "numberOfLayers"@en ;
+    <http://purl.org/dc/terms/description> "模型层数大小。"@zh .
+
+# 架构类别
+<http://example.org/large-model#architecture> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "架构类别"@zh, "architecture"@en ;
+    <http://purl.org/dc/terms/description> "大模型的架构类别，编码/解码/编码-解码架构。"@zh .
+
+# 许可
+<http://purl.org/dc/terms/accessRights> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "许可"@zh, "accessRights"@en ;
+    <http://purl.org/dc/terms/description> "大模型提供资源所依据的许可证，是否开源。"@zh .
+
+# 语种
+<http://purl.org/dc/terms/language> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModel> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "语种"@zh, "language"@en ;
+    <http://purl.org/dc/terms/description> "大模型支持的语种。"@zh .
+
+# 题名
+<http://purl.org/dc/terms/title> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset>, <http://example.org/large-model#Paper>, <http://www.w3.org/ns/mls#EvaluationSpecification>, <http://www.w3.org/ns/mls#EvaluationMeasure>, <http://www.w3.org/ns/mls#EvaluationProcedure> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "题名"@zh, "title"@en ;
+    <http://purl.org/dc/terms/description> "资源的名称。"@zh .
+
+# 规模
+<http://example.org/large-model#datasetScale> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "规模"@zh, "datasetScale"@en ;
+    <http://purl.org/dc/terms/description> "数据集的数量规模。"@zh .
+
+# 关键词
+<http://www.w3.org/ns/dcat#keyword> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "关键词"@zh, "keyword"@en ;
+    <http://purl.org/dc/terms/description> "数据集的关键词。"@zh .
+
+# 来源
+<http://example.org/large-model#dataSource> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "来源"@zh, "dataSource"@en ;
+    <http://purl.org/dc/terms/description> "数据来源。"@zh .
+
+# 描述
+<http://purl.org/dc/terms/description> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dcat#Dataset>, <http://www.w3.org/ns/mls#EvaluationSpecification>, <http://www.w3.org/ns/mls#EvaluationMeasure>, <http://www.w3.org/ns/mls#EvaluationProcedure> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "描述"@zh, "description"@en ;
+    <http://purl.org/dc/terms/description> "资源的描述。"@zh .
+
+# 摘要
+<http://purl.org/dc/terms/abstract> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#Paper> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "摘要"@zh, "abstract"@en ;
+    <http://purl.org/dc/terms/description> "论文资源的摘要。"@zh .
+
+# 接口
+<http://example.org/large-model#api> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Runs> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "接口"@zh, "api"@en ;
+    <http://purl.org/dc/terms/description> "大模型的接口。"@zh .
+
+# 预训练token数
+<http://example.org/large-model#preTrainingToken> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#HyperParameterSetting> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "预训练token数"@zh, "preTrainingToken"@en ;
+    <http://purl.org/dc/terms/description> "模型预训练过程中批量训练大小，训练token数。"@zh .
+
+# 预训练方法
+<http://example.org/large-model#pretrainingMethod> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#HyperParameterSetting> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "预训练方法"@zh, "pretrainingMethod"@en ;
+    <http://purl.org/dc/terms/description> "模型使用的预训练方法。"@zh .
+
+# 学习率
+<http://example.org/large-model#learningRate> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#HyperParameterSetting> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "学习率"@zh, "learningRate"@en ;
+    <http://purl.org/dc/terms/description> "模型预训练过程中的学习率。"@zh .
+
+# 优化器
+<http://example.org/large-model#optimizer> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#HyperParameterSetting> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "优化器"@zh, "optimizer"@en ;
+    <http://purl.org/dc/terms/description> "模型预训练过程中使用的优化器方法。"@zh .
+
+# 衰减
+<http://example.org/large-model#decayMethod> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#HyperParameterSetting> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "衰减"@zh, "decayMethod"@en ;
+    <http://purl.org/dc/terms/description> "模型预训练过程中使用的衰减方法。"@zh .
+
+# 微调方法
+<http://example.org/large-model#fineTuningMethod> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#HyperParameterSetting> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "微调方法"@zh, "fineTuningMethod"@en ;
+    <http://purl.org/dc/terms/description> "模型使用的微调方法。"@zh .
+
+# 模态类型
+<http://purl.org/dc/terms/type> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#Task> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "模态类型"@zh, "type"@en ;
+    <http://purl.org/dc/terms/description> "大模型根据模态进行分类。"@zh .
+
+# 行业类型
+<http://purl.org/dc/terms/type> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#Agent> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "行业类型"@zh, "type"@en ;
+    <http://purl.org/dc/terms/description> "大模型根据行业领域进行分类。"@zh .
+
+# token计价
+<http://schema.org/price> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#Agent> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "token计价"@zh, "price"@en ;
+    <http://purl.org/dc/terms/description> "大模型应用的token计价策略，免费限额及超出使用1token花费多少。"@zh .
+
+# 评估值
+<http://www.w3.org/ns/mls#hasValue> 
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/large-model#LargeModelEvaluation> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "评估值"@zh, "hasValue"@en ;
+    <http://purl.org/dc/terms/description> "大模型在基准测评下的评估值。"@zh .
+
+# 性能差的评估值范围
+<http://example.org/large-model#valueBad> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#EvaluationMeasure> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "性能差的评估值范围"@zh, "valueBad"@en ;
+    <http://purl.org/dc/terms/description> "性能差的评估值范围。"@zh .
+
+# 性能优的评估值范围
+<http://example.org/large-model#valueGood> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#EvaluationMeasure> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "性能优的评估值范围"@zh, "valueGood"@en ;
+    <http://purl.org/dc/terms/description> "性能优的评估值范围。"@zh .
+
+# 评估样本
+<http://example.org/large-model#sample> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#EvaluationSpecification> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "评估样本"@zh, "sample"@en ;
+    <http://purl.org/dc/terms/description> "评估使用的样本。"@zh .
+
+# 评估样本大小
+<http://example.org/large-model#sampleSize> 
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/mls#EvaluationSpecification> ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "评估样本大小"@zh, "sampleSize"@en ;
+    <http://purl.org/dc/terms/description> "评估使用的样本大小。"@zh .
+
